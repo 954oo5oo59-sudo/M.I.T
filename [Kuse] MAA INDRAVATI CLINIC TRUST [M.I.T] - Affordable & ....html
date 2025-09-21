@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="-HV3HncPEiWixNpAG1DvmJYUViqITLqKpupDXJICdGQ" />
+    <title>MAA INDRAVATI CLINIC TRUST [M.I.T] - Affordable & Trustworthy Healthcare</title>
+    <meta name="description" content="Premium healthcare services with affordable pricing. Expert doctors, modern facilities, and compassionate care in Gurugram.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Color System */
+            --bg-primary: #ffffff;
+            --bg-secondary: #fafbfc;
+            --text-primary: #0d1117;
+            --text-secondary: #656d76;
+            --text-muted: #8b949e;
+            --accent-mint: #b9f3e4;
+            --accent-lavender: #dcd7ff;
+            --accent-primary: #00d4aa;
+            --accent-secondary: #a855f7;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            --glass-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+            
+            /* Typography Scale */
+            --text-hero: clamp(3.5rem, 8vw, 4rem);
+            --text-display: clamp(2.25rem, 5vw, 2.75rem);
+            --text-title: clamp(1.75rem, 4vw, 2.25rem);
+            --text-subtitle: clamp(1.125rem, 2.5vw, 1.375rem);
+            --text-body: 1.125rem;
+            --text-small: 0.875rem;
+            
+            /* Spacing System (8pt grid) */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            --space-3xl: 6rem;
+            --space-4xl: 8rem;
+            
+            /* Border Radius */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+            
+            /* Transitions */
+            --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            
+            /* Font System */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            :root {
+                --transition-fast: all 0.01ms;
+                --transition-base: all 0.01ms;
+                --transition-slow: all 0.01ms;
+            }
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--text-primary);
+            background: linear-gradient(180deg, #ffffff 0%, #fafbfc 50%, #ffffff 100%);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Subtle noise overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: var(--space-sm) var(--space-lg);
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--glass-border);
+            transform: translateY(0);
+            transition: var(--transition-base);
+        }
+
+        .nav.hidden {
+            transform: translateY(-100%);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xl);
+            list-style: none;
+        }
+
+        .nav-link {
+            position: relative;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-fast);
+            padding: var(--space-xs) 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            transition: var(--transition-base);
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: var(--space-xs) var(--space-md);
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            transition: var(--transition-base);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--glass-shadow-hover);
+        }
+
+        .nav-secondary-call {
+            font-size: var(--text-small);
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: var(--space-xs);
+            padding: var(--space-xs);
+            border-radius: var(--radius-sm);
+            transition: var(--transition-fast);
+        }
+
+        .nav-secondary-call:hover {
+            color: var(--accent-primary);
+            background: rgba(0, 212, 170, 0.05);
+        }
+
+        /* Page Transition */
+        .page-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(250,251,252,0.98) 100%);
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .page-transition.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        /* Typography */
+        .text-hero {
+            font-size: var(--text-hero);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+        }
+
+        .text-display {
+            font-size: var(--text-display);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+
+        .text-title {
+            font-size: var(--text-title);
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        .text-subtitle {
+            font-size: var(--text-subtitle);
+            font-weight: 500;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .text-body {
+            font-size: var(--text-body);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fdff 30%, #faf5ff 70%, #ffffff 100%);
+            overflow: hidden;
+            padding-top: var(--space-3xl);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 15% 25%, var(--accent-mint) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, var(--accent-lavender) 0%, transparent 40%),
+                radial-gradient(circle at 45% 85%, var(--accent-mint) 0%, transparent 35%);
+            opacity: 0.4;
+            animation: heroFloat 15s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+            50% { transform: translateY(-15px) rotate(1deg) scale(1.02); }
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            padding: var(--space-lg);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-md);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s var(--spring) forwards 0.3s;
+        }
+
+        .hero-subtitle {
+            margin-bottom: var(--space-3xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s var(--spring) forwards 0.5s;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--space-xl);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s var(--spring) forwards 0.7s;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: var(--space-xl);
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            animation: fadeInUp 0.8s var(--spring) forwards 0.9s;
+        }
+
+        .scroll-indicator {
+            width: 24px;
+            height: 40px;
+            border: 2px solid var(--text-muted);
+            border-radius: var(--radius-full);
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition-base);
+        }
+
+        .scroll-indicator::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 8px;
+            background: var(--text-muted);
+            border-radius: 2px;
+            animation: scrollBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollBounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(8px); }
+            60% { transform: translateX(-50%) translateY(4px); }
+        }
+
+        .scroll-indicator:hover {
+            border-color: var(--accent-primary);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Call Dropdown */
+        .call-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .call-dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow-hover);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition-base);
+            z-index: 10;
+            min-width: 200px;
+            margin-top: var(--space-xs);
+        }
+
+        .call-dropdown:hover .call-dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .call-option {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-sm) var(--space-md);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-fast);
+            border-radius: var(--radius-sm);
+            margin: var(--space-xs);
+        }
+
+        .call-option:hover {
+            background: rgba(0, 212, 170, 0.1);
+            color: var(--accent-primary);
+        }
+
+        .call-option:first-child {
+            margin-top: var(--space-sm);
+        }
+
+        .call-option:last-child {
+            margin-bottom: var(--space-sm);
+        }
+
+        .call-option-label {
+            font-size: var(--text-small);
+            color: var(--text-muted);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-md) var(--space-xl);
+            border: none;
+            border-radius: var(--radius-full);
+            font-family: inherit;
+            font-size: var(--text-body);
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            min-height: 48px;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--glass-shadow-hover);
+        }
+
+        .btn-primary:active {
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--glass-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(12px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.95);
+            transform: translateY(-2px);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--accent-primary);
+            border: 2px solid var(--accent-primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--accent-primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        /* Sections */
+        .section {
+            padding: var(--space-4xl) var(--space-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition-slow);
+        }
+
+        .section-header.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glass Cards */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            transition: var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: var(--transition-slow);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--glass-shadow-hover), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+
+        .glass-card:hover::before {
+            left: 100%;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            padding: var(--space-lg);
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            transition: var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .info-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--accent-primary);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .info-content h3 {
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+            color: var(--text-primary);
+        }
+
+        .info-content p {
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .contact-numbers {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xs);
+        }
+
+        .contact-number {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .contact-number a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-number a:hover {
+            text-decoration: underline;
+        }
+
+        .copy-btn {
+            background: none;
+            border: none;
+            color: var(--accent-primary);
+            cursor: pointer;
+            font-size: var(--text-small);
+            padding: var(--space-xs);
+            border-radius: var(--radius-sm);
+            transition: var(--transition-fast);
+            margin-left: var(--space-xs);
+        }
+
+        .copy-btn:hover {
+            background: rgba(0, 212, 170, 0.1);
+        }
+
+        /* Doctors Section */
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+
+        .doctor-card {
+            text-align: center;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: var(--transition-base);
+            cursor: pointer;
+        }
+
+        .doctor-card:hover {
+            transform: perspective(1000px) rotateY(5deg) rotateX(2deg) translateY(-8px);
+        }
+
+        .doctor-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin: 0 auto var(--space-md);
+            background: linear-gradient(135deg, var(--accent-mint), var(--accent-lavender));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--glass-shadow);
+            border: 3px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .doctor-avatar::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+            transform: rotate(45deg);
+            transition: var(--transition-slow);
+            opacity: 0;
+        }
+
+        .doctor-card:hover .doctor-avatar::after {
+            opacity: 1;
+            animation: shine 0.8s ease-out;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .doctor-avatar svg {
+            width: 70px;
+            height: 70px;
+            color: var(--accent-primary);
+            z-index: 1;
+        }
+
+        .doctor-name {
+            font-size: 1.375rem;
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+            color: var(--text-primary);
+        }
+
+        .doctor-qualification {
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: var(--space-md);
+        }
+
+        .doctor-book-btn {
+            font-size: var(--text-small);
+            padding: var(--space-xs) var(--space-md);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: var(--transition-base);
+        }
+
+        .doctor-card:hover .doctor-book-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Booking Form */
+        .booking-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .booking-form {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--radius-xl);
+            padding: var(--space-3xl);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow-hover);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-lg);
+            position: relative;
+        }
+
+        .form-label {
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            transition: var(--transition-fast);
+            pointer-events: none;
+            background: transparent;
+            padding: 0 var(--space-xs);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid rgba(0, 212, 170, 0.2);
+            border-radius: var(--radius-lg);
+            font-family: inherit;
+            font-size: var(--text-body);
+            background: rgba(255, 255, 255, 0.8);
+            transition: var(--transition-base);
+            backdrop-filter: blur(8px);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 4px rgba(0, 212, 170, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .form-input:focus + .form-label,
+        .form-input:not(:placeholder-shown) + .form-label {
+            top: -0.5rem;
+            left: 1rem;
+            font-size: var(--text-small);
+            color: var(--accent-primary);
+            background: white;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-validation {
+            font-size: var(--text-small);
+            color: #ef4444;
+            margin-top: var(--space-xs);
+            opacity: 0;
+            transition: var(--transition-fast);
+        }
+
+        .form-validation.show {
+            opacity: 1;
+        }
+
+        .form-submit {
+            width: 100%;
+            justify-content: center;
+            font-size: 1.125rem;
+            padding: var(--space-md) var(--space-xl);
+        }
+
+        /* Donation Section */
+        .donation-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .donation-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .upi-container {
+            background: rgba(185, 243, 228, 0.1);
+            border: 2px solid rgba(185, 243, 228, 0.3);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            margin: var(--space-lg) 0;
+            text-align: center;
+        }
+
+        .qr-container {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto var(--space-md);
+            background: white;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--glass-shadow);
+            animation: breathe 3s ease-in-out infinite;
+            padding: var(--space-sm);
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); box-shadow: var(--glass-shadow); }
+            50% { transform: scale(1.02); box-shadow: var(--glass-shadow-hover); }
+        }
+
+        .qr-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: var(--radius-sm);
+        }
+
+        .qr-caption {
+            font-size: var(--text-small);
+            color: var(--text-muted);
+            margin-bottom: var(--space-md);
+            font-style: italic;
+        }
+
+        .upi-id {
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--accent-primary);
+            background: white;
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            margin: var(--space-md) 0;
+            border: 1px solid rgba(0, 212, 170, 0.3);
+            position: relative;
+        }
+
+        .upi-actions {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: var(--space-md);
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(180deg, transparent 0%, rgba(185, 243, 228, 0.05) 100%);
+            border-top: 1px solid var(--glass-border);
+            padding: var(--space-3xl) var(--space-lg) var(--space-xl);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-cta {
+            margin-bottom: var(--space-3xl);
+        }
+
+        .footer-tagline {
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-top: var(--space-xl);
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            top: var(--space-lg);
+            right: var(--space-lg);
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--glass-shadow-hover);
+            transform: translateX(400px);
+            transition: var(--transition-base);
+            z-index: 1000;
+            backdrop-filter: blur(16px);
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition-slow);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: var(--transition-base);
+        }
+
+        .stagger-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-secondary-call {
+                display: none;
+            }
+
+            .hero {
+                padding-top: var(--space-2xl);
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+
+            .call-dropdown-content {
+                position: fixed;
+                top: auto;
+                bottom: var(--space-lg);
+                left: var(--space-md);
+                right: var(--space-md);
+                transform: translateY(100%);
+            }
+
+            .call-dropdown:hover .call-dropdown-content,
+            .call-dropdown.active .call-dropdown-content {
+                transform: translateY(0);
+            }
+
+            .section {
+                padding: var(--space-3xl) var(--space-md);
+            }
+
+            .booking-form {
+                padding: var(--space-lg);
+            }
+
+            .upi-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .doctors-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .doctor-card:hover {
+                transform: translateY(-4px);
+            }
+
+            .contact-numbers {
+                gap: var(--space-sm);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav {
+                padding: var(--space-sm);
+            }
+
+            .section {
+                padding: var(--space-2xl) var(--space-sm);
+            }
+
+            .qr-container {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+        /* Focus styles for accessibility */
+        .btn:focus-visible,
+        .form-input:focus-visible,
+        .nav-link:focus-visible {
+            outline: 2px solid var(--accent-primary);
+            outline-offset: 2px;
+        }
+
+        /* Kuse Branding */
+        .kuse-branding {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: var(--text-small);
+            font-weight: 500;
+            transition: var(--transition-fast);
+            cursor: pointer;
+            padding: var(--space-xs);
+            border-radius: var(--radius-sm);
+        }
+
+        .kuse-branding:hover {
+            color: var(--accent-primary);
+            background: rgba(0, 212, 170, 0.05);
+            transform: translateY(-1px);
+        }
+
+        .kuse-branding svg {
+            height: 1em;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">M.I.T Clinic</a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#doctors" class="nav-link">Doctors</a></li>
+                <li><a href="#booking" class="nav-link">Book</a></li>
+                <li><a href="#donation" class="nav-link">Donate</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: var(--space-sm);">
+                <a href="#booking" class="nav-cta">Book Now</a>
+                <a href="tel:+919999935594" class="nav-secondary-call" aria-label="Call secondary number 99999 35594">Call • 99999 35594</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition" id="pageTransition"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="text-hero hero-title">MAA INDRAVATI CLINIC TRUST [M.I.T]</h1>
+            <p class="text-subtitle hero-subtitle">Affordable & Trustworthy Healthcare for All</p>
+            <div class="hero-cta">
+                <div class="call-dropdown">
+                    <button class="btn btn-primary" aria-label="Call clinic at 95400 50059 or 99999 35594">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call Now
+                    </button>
+                    <div class="call-dropdown-content">
+                        <a href="tel:+919540050059" class="call-option" data-phone="+919540050059">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            <div>
+                                <div>+91 95400 50059</div>
+                                <div class="call-option-label">Primary</div>
+                            </div>
+                        </a>
+                        <a href="tel:+919999935594" class="call-option" data-phone="+919999935594">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            <div>
+                                <div>+91 99999 35594</div>
+                                <div class="call-option-label">Secondary</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="https://wa.me/919540050059" class="btn btn-primary">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.109"/>
+                    </svg>
+                    WhatsApp
+                </a>
+                <button class="btn btn-secondary" onclick="scrollToSection('booking')">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                    </svg>
+                    Book Appointment
+                </button>
+                <button class="btn btn-outline" onclick="scrollToSection('donation')">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    Donate
+                </button>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator" onclick="scrollToSection('about')"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section fade-in" id="about">
+        <div class="section-header">
+            <h2 class="text-display">About Our Clinic</h2>
+            <p class="text-subtitle">Providing quality healthcare with compassion and trust</p>
+        </div>
+        
+        <div class="about-grid">
+            <div class="info-item stagger-item">
+                <svg class="info-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <div class="info-content">
+                    <h3>Address</h3>
+                    <p>House No. 45, Gali no-3, D-Block, Sheetla Colony, Gurugram, Haryana
+                        <button class="copy-btn" onclick="copyText('House No. 45, Gali no-3, D-Block, Sheetla Colony, Gurugram, Haryana')" aria-label="Copy address">Copy</button>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="info-item stagger-item">
+                <svg class="info-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+                    <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                </svg>
+                <div class="info-content">
+                    <h3>Hours</h3>
+                    <p>Daily 10:00–14:00 and 16:00–22:00</p>
+                </div>
+            </div>
+            
+            <div class="info-item stagger-item">
+                <svg class="info-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                <div class="info-content">
+                    <h3>Contact</h3>
+                    <div class="contact-numbers">
+                        <div class="contact-number">
+                            <a href="/cdn-cgi/l/email-protection#6b0f0e1d085a58595d2b0c060a020745080406" style="color: var(--accent-primary); text-decoration: none;"><span class="__cf_email__" data-cfemail="07636271643634353147606a666e6b2964686a">[email&#160;protected]</span></a>
+                            <button class="copy-btn" onclick="copyText('devc1326@gmail.com')" aria-label="Copy email">Copy</button>
+                        </div>
+                        <div class="contact-number">
+                            <a href="tel:+919540050059" data-phone="+919540050059" style="color: var(--accent-primary); text-decoration: none;">+91 95400 50059</a>
+                            <button class="copy-btn" onclick="copyText('+919540050059')" aria-label="Copy primary phone">Copy</button>
+                        </div>
+                        <div class="contact-number">
+                            <a href="tel:+919999935594" data-phone="+919999935594" style="color: var(--accent-primary); text-decoration: none;">+91 99999 35594</a>
+                            <button class="copy-btn" onclick="copyText('+919999935594')" aria-label="Copy secondary phone">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="section fade-in" id="doctors">
+        <div class="section-header">
+            <h2 class="text-display">Our Expert Doctors</h2>
+            <p class="text-subtitle">Experienced healthcare professionals dedicated to your wellbeing</p>
+        </div>
+        
+        <div class="doctors-grid">
+            <div class="glass-card doctor-card stagger-item">
+                <div class="doctor-avatar">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div>
+                <h3 class="doctor-name">Dr. Vishal Chauhan</h3>
+                <p class="doctor-qualification">M.B.B.S, M.D</p>
+                <button class="btn btn-outline doctor-book-btn" onclick="scrollToBooking('Vishal')">
+                    Book with Dr. Vishal
+                </button>
+            </div>
+            
+            <div class="glass-card doctor-card stagger-item">
+                <div class="doctor-avatar">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div>
+                <h3 class="doctor-name">Dr. Dev Chauhan</h3>
+                <p class="doctor-qualification">B.A.M.S</p>
+                <button class="btn btn-outline doctor-book-btn" onclick="scrollToBooking('Dev')">
+                    Book with Dr. Dev
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="section fade-in" id="booking">
+        <div class="section-header">
+            <h2 class="text-display">Book Your Appointment</h2>
+            <p class="text-subtitle">Schedule a consultation with our healthcare experts</p>
+        </div>
+        
+        <div class="booking-container">
+            <form class="booking-form glass-card" id="bookingForm">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+                    <label for="name" class="form-label">Full Name</label>
+                    <div class="form-validation" id="nameValidation">Please enter your full name</div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" class="form-input" placeholder=" " required>
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <div class="form-validation" id="phoneValidation">Please enter a valid phone number</div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="email" name="email" class="form-input" placeholder=" ">
+                    <label for="email" class="form-label">Email Address (Optional)</label>
+                </div>
+
+                <div class="form-group" id="doctorGroup" style="display: none;">
+                    <input type="text" id="doctor" name="doctor" class="form-input" placeholder=" " readonly>
+                    <label for="doctor" class="form-label">Selected Doctor</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="datetime-local" id="time" name="time" class="form-input" placeholder=" " required>
+                    <label for="time" class="form-label">Preferred Time</label>
+                </div>
+                
+                <div class="form-group">
+                    <textarea id="message" name="message" class="form-input form-textarea" placeholder=" "></textarea>
+                    <label for="message" class="form-label">Message (Optional)</label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary form-submit">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                    Submit Appointment Request
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="section fade-in" id="donation">
+        <div class="section-header">
+            <h2 class="text-display">Support Our Mission</h2>
+            <p class="text-subtitle">Help us provide affordable healthcare to those in need</p>
+        </div>
+        
+        <div class="donation-container">
+            <div class="glass-card" style="text-align: center;">
+                <div class="donation-badge">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    Trusted Healthcare Partner
+                </div>
+                
+                <div class="upi-container">
+                    <h3 class="text-body" style="font-weight: 600; margin-bottom: var(--space-md);">UPI Donation</h3>
+                    
+                    <div class="qr-container">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=skynatebro997-1@okicici%26pn=MAA%20INDRAVATI%20CLINIC%20TRUST%20%5BM.I.T%5D%26cu=INR" 
+                             alt="UPI payment QR for MAA INDRAVATI CLINIC TRUST [M.I.T]" 
+                             loading="lazy" 
+                             decoding="async">
+                    </div>
+                    
+                    <div class="qr-caption">Scan with any UPI app (PhonePe, GPay, Paytm)</div>
+                    
+                    <div class="upi-id" id="upiId">skynatebro997-1@okicici</div>
+                    
+                    <div class="upi-actions">
+                        <a href="upi://pay?pa=skynatebro997-1@okicici&pn=MAA%20INDRAVATI%20CLINIC%20TRUST%20%5BM.I.T%5D&cu=INR" class="btn btn-primary">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"/>
+                            </svg>
+                            Pay via UPI
+                        </a>
+                        
+                        <button class="btn btn-secondary" onclick="copyUpiId()">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                            </svg>
+                            Copy UPI ID
+                        </button>
+                    </div>
+                </div>
+                
+                <p class="text-body" style="color: var(--text-secondary); font-style: italic; margin-top: var(--space-md);">
+                    Your generous donations help us provide quality healthcare to underserved communities. Every contribution makes a difference in someone's life.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-cta">
+                <h3 class="text-display" style="margin-bottom: var(--space-lg);">Ready to Take Care of Your Health?</h3>
+                <div class="hero-cta">
+                    <div class="call-dropdown">
+                        <button class="btn btn-primary" aria-label="Call clinic at 95400 50059 or 99999 35594">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            Call Now
+                        </button>
+                        <div class="call-dropdown-content">
+                            <a href="tel:+919540050059" class="call-option" data-phone="+919540050059">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                                <div>
+                                    <div>+91 95400 50059</div>
+                                    <div class="call-option-label">Primary</div>
+                                </div>
+                            </a>
+                            <a href="tel:+919999935594" class="call-option" data-phone="+919999935594">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                                <div>
+                                    <div>+91 99999 35594</div>
+                                    <div class="call-option-label">Secondary</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/919540050059" class="btn btn-primary">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.109"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="/cdn-cgi/l/email-protection#096d6c7f6a383a3b3f496e64686065276a6664" class="btn btn-secondary">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        Email Us
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-tagline">
+                "Healing with Care, Serving with Trust"
+            </div>
+            
+            <!-- Kuse Branding -->
+            <div style="margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--glass-border);">
+                <a href="https://kuse.ai" target="_blank" class="kuse-branding">
+                    made with
+                    <svg viewBox="0,0,160,44" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m.01,20.65C-.43,8.25,9.3-2.03,22.04.34,34.78,2.72,43.29,8.32,43.29,22.9s-8.66,19.01-22.03,20.3C7.9,44.5.46,33.05.01,20.65z" fill="currentColor"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="m146.76,7.94c8.07,0,13.24,6.15,13.24,14.58v1.39h-20.75c.45,4.05,3.51,7.37,8.57,7.37,2.62,0,5.73-1.05,7.62-2.94l2.67,3.83c-2.67,2.55-6.62,3.88-10.9,3.88-8.07,0-14.08-5.6-14.08-14.08,0-7.76,5.67-14.02,13.63-14.02zm0,4.77c-5.01,0-7.29,3.83-7.57,7.1h15.13c-.11-3.16-2.28-7.1-7.57-7.1z" fill="currentColor"/>
+                        <path d="m86.64,24.49c0,4.15,2.39,6.84,6.84,6.84,4.4,0,6.84-2.69,6.84-6.84V8.55h5.37v16.33c0,6.7-4.06,11.14-12.21,11.14-8.21,0-12.21-4.5-12.21-11.09V8.55h5.37v15.94zm32.99-16.55c4.49,0,8.06,1.47,10.6,3.86l-2.59,3.81c-2.05-2-5.28-3.08-8.06-3.08-2.88,0-4.84,1.37-4.84,3.32,0,1.91,2.64,2.54,5.81,3.27,4.59,1.08,10.26,2.4,10.26,8.46,0,4.94-3.76,8.41-11.14,8.41-4.98,0-8.94-1.76-11.24-4.11l2.54-4.11c1.86,1.91,5.18,3.67,8.84,3.67,3.91,0,5.57-1.66,5.57-3.62,0-2.3-2.88-2.98-6.21-3.76-4.54-1.08-9.87-2.3-9.87-8.06,0-4.5,4.2-8.06,10.31-8.06zM60.79,20.82,71.44,8.55h6.5L66.46,21.26,78.82,35.44h-6.5l-9.28-11.1-2.25,2.49v8.6h-5.33V8.55h5.33v12.27z" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Initialize application
+        (() => {
+            let lastScrollY = 0;
+            let ticking = false;
+
+            // Navigation scroll behavior
+            function updateNavbar() {
+                const navbar = document.getElementById(`navbar`);
+                const currentScrollY = window.pageYOffset;
+                
+                if (currentScrollY > 100) {
+                    if (currentScrollY > lastScrollY) {
+                        navbar.classList.add(`hidden`);
+                    } else {
+                        navbar.classList.remove(`hidden`);
+                    }
+                } else {
+                    navbar.classList.remove(`hidden`);
+                }
+                
+                lastScrollY = currentScrollY;
+                ticking = false;
+            }
+
+            function requestNavUpdate() {
+                if (!ticking) {
+                    requestAnimationFrame(updateNavbar);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener(`scroll`, requestNavUpdate);
+
+            // Page transition effect
+            window.triggerPageTransition = function() {
+                const overlay = document.getElementById(`pageTransition`);
+                overlay.classList.add(`active`);
+                
+                setTimeout(() => {
+                    overlay.classList.remove(`active`);
+                }, 300);
+            };
+
+            // Smooth scroll with page transition
+            window.scrollToSection = function(sectionId) {
+                triggerPageTransition();
+                
+                setTimeout(() => {
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        const offsetTop = section.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: `smooth`
+                        });
+                    }
+                }, 150);
+            };
+
+            // Scroll to booking with doctor selection
+            window.scrollToBooking = function(doctorName) {
+                const doctorGroup = document.getElementById(`doctorGroup`);
+                const doctorInput = document.getElementById(`doctor`);
+                
+                if (doctorName) {
+                    doctorGroup.style.display = `block`;
+                    doctorInput.value = `Dr. ${doctorName} Chauhan`;
+                }
+                
+                scrollToSection(`booking`);
+            };
+
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: `0px 0px -50px 0px`
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.classList.contains(`stagger-item`)) {
+                            setTimeout(() => {
+                                entry.target.classList.add(`visible`);
+                            }, index * 100);
+                        } else {
+                            entry.target.classList.add(`visible`);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Form validation
+            function validateForm() {
+                const nameInput = document.getElementById(`name`);
+                const phoneInput = document.getElementById(`phone`);
+                const nameValidation = document.getElementById(`nameValidation`);
+                const phoneValidation = document.getElementById(`phoneValidation`);
+                
+                let isValid = true;
+
+                // Name validation
+                if (!nameInput.value.trim()) {
+                    nameValidation.classList.add(`show`);
+                    isValid = false;
+                } else {
+                    nameValidation.classList.remove(`show`);
+                }
+
+                // Phone validation
+                const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+                if (!phoneRegex.test(phoneInput.value.trim())) {
+                    phoneValidation.classList.add(`show`);
+                    isValid = false;
+                } else {
+                    phoneValidation.classList.remove(`show`);
+                }
+
+                return isValid;
+            }
+
+            // Form submission
+            document.getElementById(`bookingForm`).addEventListener(`submit`, async (e) => {
+                e.preventDefault();
+                
+                if (!validateForm()) {
+                    return;
+                }
+                
+                const formData = new FormData(e.target);
+                const data = Object.fromEntries(formData.entries());
+                
+                const submitBtn = e.target.querySelector(`button[type="submit"]`);
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = `<svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" style="animation: spin 1s linear infinite;"><path d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8c-.45-.83-.7-1.79-.7-2.8 0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z"/></svg>Sending...`;
+                submitBtn.disabled = true;
+                
+                try {
+                    // Compose email content
+                    const subject = encodeURIComponent(`Appointment Request - ${data.name}`);
+                    const body = encodeURIComponent(`
+Name: ${data.name}
+Phone: ${data.phone}
+Email: ${data.email || `Not provided`}
+${data.doctor ? `Preferred Doctor: ${data.doctor}` : ``}
+Preferred Time: ${data.time}
+Message: ${data.message || `No additional message`}
+
+Please confirm this appointment request.
+                    `);
+                    
+                    // Open email client
+                    window.location.href = `mailto:devc1326@gmail.com?subject=${subject}&body=${body}`;
+                    
+                    // Also create WhatsApp link
+                    const whatsappText = encodeURIComponent(`Hi! I would like to book an appointment.
+
+Name: ${data.name}
+Phone: ${data.phone}
+${data.doctor ? `Preferred Doctor: ${data.doctor}` : ``}
+Preferred Time: ${new Date(data.time).toLocaleString()}
+${data.message ? `Message: ${data.message}` : ``}`);
+                    
+                    setTimeout(() => {
+                        const useWhatsApp = confirm(`Email client opened. Would you also like to send via WhatsApp?`);
+                        if (useWhatsApp) {
+                            window.open(`https://wa.me/919540050059?text=${whatsappText}`, `_blank`);
+                        }
+                    }, 1000);
+                    
+                    showToast(`Appointment request sent successfully!`);
+                    e.target.reset();
+                    document.getElementById(`doctorGroup`).style.display = `none`;
+                    
+                } catch (error) {
+                    showToast(`Please try again or call us directly.`);
+                }
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            });
+
+            // Copy functions
+            window.copyText = function(text) {
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(text).then(() => {
+                        showToast(`Copied: ${text}`);
+                    }).catch(() => {
+                        fallbackCopyTextToClipboard(text);
+                    });
+                } else {
+                    fallbackCopyTextToClipboard(text);
+                }
+            };
+
+            window.copyUpiId = function() {
+                const upiId = document.getElementById(`upiId`).textContent;
+                copyText(upiId);
+            };
+
+            function fallbackCopyTextToClipboard(text) {
+                const textArea = document.createElement(`textarea`);
+                textArea.value = text;
+                textArea.style.position = `fixed`;
+                textArea.style.opacity = `0`;
+                
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                
+                try {
+                    document.execCommand(`copy`);
+                    showToast(`Copied: ${text}`);
+                } catch (err) {
+                    showToast(`Please manually copy: ${text}`);
+                }
+                
+                document.body.removeChild(textArea);
+            }
+
+            // Toast notification
+            window.showToast = function(message) {
+                const toast = document.getElementById(`toast`);
+                toast.textContent = message;
+                toast.classList.add(`show`);
+                
+                setTimeout(() => {
+                    toast.classList.remove(`show`);
+                }, 3000);
+            };
+
+            // Mobile call dropdown handling
+            function handleCallDropdown() {
+                const callDropdowns = document.querySelectorAll(`.call-dropdown`);
+                
+                if (window.innerWidth <= 768) {
+                    callDropdowns.forEach(dropdown => {
+                        const button = dropdown.querySelector(`.btn`);
+                        const content = dropdown.querySelector(`.call-dropdown-content`);
+                        
+                        button.addEventListener(`click`, (e) => {
+                            e.preventDefault();
+                            dropdown.classList.toggle(`active`);
+                        });
+                        
+                        // Close dropdown when clicking outside
+                        document.addEventListener(`click`, (e) => {
+                            if (!dropdown.contains(e.target)) {
+                                dropdown.classList.remove(`active`);
+                            }
+                        });
+                    });
+                }
+            }
+
+            // Initialize observers when DOM is loaded
+            document.addEventListener(`DOMContentLoaded`, () => {
+                const fadeElements = document.querySelectorAll(`.fade-in, .section-header`);
+                fadeElements.forEach(el => observer.observe(el));
+                
+                const staggerElements = document.querySelectorAll(`.stagger-item`);
+                staggerElements.forEach(el => observer.observe(el));
+
+                // Smooth scroll for navigation links
+                document.querySelectorAll(`.nav-link, .nav-cta`).forEach(link => {
+                    link.addEventListener(`click`, (e) => {
+                        e.preventDefault();
+                        const targetId = link.getAttribute(`href`).substring(1);
+                        scrollToSection(targetId);
+                    });
+                });
+
+                // Phone number formatting
+                const phoneInput = document.getElementById(`phone`);
+                phoneInput.addEventListener(`input`, (e) => {
+                    let value = e.target.value.replace(/\D/g, ``);
+                    if (value.length >= 10) {
+                        value = value.substring(0, 10);
+                        e.target.value = `+91 ${value.substring(0, 5)} ${value.substring(5)}`;
+                    }
+                });
+
+                // Initialize call dropdown handling
+                handleCallDropdown();
+            });
+
+            // Handle window resize
+            window.addEventListener(`resize`, () => {
+                handleCallDropdown();
+            });
+
+            // Add CSS animations
+            const style = document.createElement(`style`);
+            style.textContent = `
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+            `;
+            document.head.appendChild(style);
+
+        })();
+    </script>
+
+    <!-- Kuse Inner Script -->
+    <script src="https://cdn.kuse.ai/sdk.prd.js"></script>
+</body>
+</html>
